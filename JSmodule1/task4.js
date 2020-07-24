@@ -1,4 +1,4 @@
-const orderPieces = null;
+const orderPieces = 10;
 
 const credits = 23580;
 const pricePerDroid = 3000;
@@ -10,18 +10,12 @@ let balanceСredit = credits - totalPrice; // Write code in this line
 let message;
 
 // Write code under this line
-
 if (orderPieces === null) {
   message = CANCELED_BY_USER;
-}
-
-if (balanceСredit >= 0) {
-  message = `Вы купили ${orderPieces} дроидов, на счету осталось ${balanceСredit} кредитов `;
-} else if (balanceСredit < 0) {
+} else if (totalPrice > credits) {
   message = ACCESS_DENIED;
-} else if (orderPieces === null) {
-  message = CANCELED_BY_USER;
-}
+} else
+  message = `Вы купили ${orderPieces} дроидов, на счету осталось ${balanceСredit} кредитов`;
 
 console.log(message);
 
