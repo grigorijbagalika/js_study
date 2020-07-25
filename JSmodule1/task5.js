@@ -1,4 +1,4 @@
-const countryName = null;
+const countryName = "ЧИЛИ";
 
 const CANCELED_BY_USER = "Отменено пользователем!";
 const NO_DELIVERY = "В выбранную страну доставка недоступна.";
@@ -33,6 +33,7 @@ if (countryName === null) {
 
     default:
       message = NO_DELIVERY;
+    //   console.log(NO_DELIVERY);
     // Write code under this line
   }
 }
