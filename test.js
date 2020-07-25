@@ -1,3 +1,11 @@
-nts.includes("b");
+const min = 21;
+const max = 99;
+let total = 0;
 
-console.log(nts);
+for (let i = min; i <= max; i += 1) {
+  console.log(i);
+
+  if (i % 2 === 0) {
+    console.log(`четное: `, i);
+  }
+}
