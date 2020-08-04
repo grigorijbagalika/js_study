@@ -1,8 +1,11 @@
-function formatString(string, maxLength = 40) {
+function formatString(string, maxLength = 20) {
   // Write code under this line
+  const normalizeString = string.split("").splice(0, maxLength).join("");
+
+  return normalizeString;
 }
 
-//console.log(formatString('Curabitur ligula sapien, tincidunt non.'));
+console.log(formatString("Curabitur ligula sapien, tincidunt non."));
 // 'Curabitur ligula sapien, tincidunt non.'
 
 //console.log(formatString('Vestibulum facilisis, purus nec pulvinar iaculis.'));
