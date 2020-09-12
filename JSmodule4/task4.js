@@ -4,8 +4,10 @@ const account = {
   discount: 0.1,
   orders: ["order-1", "order-2", "order-3"],
   changeDiscount(value) {
-    discount = this.value; // Write code in this line
-    account.changeDiscount(0.15);
+    discount = value;
+    this.value = 0.15;
+
+    // Write code in this line
   },
   showOrders() {
     return orders; // Write code in this line
@@ -17,11 +19,14 @@ const account = {
 };
 const copyAccount = Object.assign({}, account);
 copyAccount.orders = [...account.orders];
+
+console.log(account.discount);
+
 // копируем для автотестов ссылочные типы
 
 /*
 account.changeDiscount(0.15);
-//console.log(account.discount); // 0.15
+// console.log(account.discount); // 0.15
 
 //console.log(account.showOrders());
 // ['order-1', 'order-2', 'order-3']
